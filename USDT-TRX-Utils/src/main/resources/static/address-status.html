@@ -1,0 +1,55 @@
+<div class="container">
+    <h1 class="title">TRON TRC20 地址状态查询</h1>
+
+    <!-- 查询表单 -->
+    <div class="layui-form">
+        <div class="form-row">
+            <div class="layui-form-item">
+                <label class="layui-form-label">查询模式</label>
+                <div class="layui-input-inline">
+                    <select id="queryMode" lay-filter="queryMode">
+                        <option value="single">单地址查询</option>
+                        <option value="batch">批量查询</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item single-input">
+                <label class="layui-form-label">地址</label>
+                <div class="layui-input-inline" style="width: 400px;">
+                    <input type="text" id="singleAddress" placeholder="请输入 TRC20 地址" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item batch-input">
+                <label class="layui-form-label">批量地址</label>
+                <div class="layui-input-block">
+                    <textarea id="batchAddresses" placeholder="每行输入一个 TRC20 地址" class="layui-textarea" style="min-height: 100px;"></textarea>
+                </div>
+            </div>
+            <button class="layui-btn" id="queryBtn">查询</button>
+        </div>
+    </div>
+
+    <!-- 结果表格 -->
+    <div class="result-table" id="resultTable">
+        <table class="layui-table">
+            <thead>
+            <tr>
+                <th>地址</th>
+                <th>是否激活</th>
+                <th>TRX余额</th>
+                <th>USDT余额</th>
+                <th>激活时间</th>
+                <th>最后USDT发送时间</th>
+                <th>最后USDT接收时间</th>
+                <th>带宽余额</th>
+                <th>能量余额</th>
+            </tr>
+            </thead>
+            <tbody id="resultBody"></tbody>
+        </table>
+    </div>
+</div>
+<!-- Footer -->
+<div class="layui-footer" style="text-align: center; padding: 20px 0; margin-top: 20px;">
+    <p>开源项目：<a href="https://github.com/forr-forr/USDT-TRX-Utlis" target="_blank" style="color: #1abc9c; text-decoration: none;">USDT-TRX-Utils</a> | 如果喜欢，请给个 <span style="color: #ff9900;">★ Star</span> 支持！</p>
+</div>

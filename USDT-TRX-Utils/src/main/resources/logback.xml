@@ -1,0 +1,14 @@
+<configuration>
+    <!-- 定义 STDOUT appender -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 设置 logger 级别 -->
+    <logger name="io.grpc.netty.shaded.io.netty.util.internal.logging.InternalLoggerFactory" level="OFF"/>
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

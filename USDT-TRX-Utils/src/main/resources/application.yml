@@ -1,0 +1,8 @@
+server:
+  # 端口
+  port: 8082
+tron: #请准备一个用于测试的 USDT 私钥地址。建议从 TronLink 创建一个空钱包，或在测试环境中生成。
+  PrivateKey: "PrivateKey"
+
+
+
